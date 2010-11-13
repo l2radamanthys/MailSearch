@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+
 from constantes import *
 import re
 
+
 #exprecion para verificar si el mail es valido extraido del parser de Django
-#
 EMAIL_RE_VALID = re.compile(
     r"(^[-!#$%&'*+/=?^_`{}|~0-9A-Z]+(\.[-!#$%&'*+/=?^_`{}|~0-9A-Z]+)*"  # dot-atom
     r'|^"([\001-\010\013\014\016-\037!#-\[\]-\177]|\\[\001-\011\013\014\016-\177])*"' # quoted-string
@@ -28,7 +29,7 @@ def es_html(url):
     return True
 
 
-def es_email(value):
+def is_valid_email(value):
     if EMAIL_RE_VALID.search(value):
         return True
     else:
