@@ -1,2 +1,5 @@
 *.txt
 *.pyc
+*.bat
+*.db
+./data

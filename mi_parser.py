@@ -43,7 +43,10 @@ class URLParser(SGMLParser):
             if tag == 'href' and len(value) > 7:
                 if value[:4] != 'http':
                     if 'mailto' in value:
-                        self.handle_data(value.split(':')[1])
+                        try:
+                            self.handle_data(value.split(':')[1])
+                        except:
+                            self.handle_data(value.split(':')[0])
                         self.handle_data(value)
 
                     elif self.url != '':

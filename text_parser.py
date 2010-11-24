@@ -1,7 +1,12 @@
 
 
-from constantes import *
+"""
+    Parsea las salidas del programa arreglando poibles direciones de
+    Email invalidas
+"""
 
+
+from constantes import *
 
 
 def correg(cad):
